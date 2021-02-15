@@ -1,0 +1,10 @@
+total time: 17s
+
+Hello there. You thought this was over, didn't you? Ha ha. Ha ha. We here at the Aperture Science Encrichment Center would greatly appreciate you taking the time to fill out this survey.
+After submission, there will be cake.
+
+check out these links for a fade-in effect for html elements and the <audio> element:
+
+https://www.geeksforgeeks.org/how-to-create-fade-in-effect-on-page-load-using-css/
+
+https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio

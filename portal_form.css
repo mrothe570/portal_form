@@ -1,0 +1,202 @@
+/*
+    #ea9b25 (orange - edge)
+    #7af9ff (cyan - edge)
+    #2a3b69 (dark blue - mass)
+    #383838 (darkest gray)
+    #c9cacc (dark gray)
+    #dee5ed (light gray)
+    box-shadow: 0 1px 4px 4px #ea9b25; (orange)
+    box-shadow: 0 1px 4px 4px #7af9ff; (blue)
+*/
+
+html {
+    margin: 0;
+    background: linear-gradient(60deg, rgba(100, 125, 147, 0.75), rgba(100, 125, 147, 0.95));
+    /* url(https://www.dropbox.com/s/f9dhsoc3c9j9i6k/circuit_board.png?raw=1) no-repeat center/cover; */
+    font-size: 10px;
+}
+
+/*
+    my html element has a margin of 0 (generally best practice)
+    it also has a specified background using background shorthand
+    first background element is a linear-gradient with an angle of 60 degrees and rgba() values for softer color to sit over the background-image
+    background-image is a url referenced from dropbox (appendage raw=1 instead of dl=0) with no-repeat, position, and cover values set
+    ** remember values like contain and cover will scale an image without cropping or stretching
+    ** syntax for background shorthand does not matter except for background-size, which must be included immediately after background-position and separated by a forward slash: [background-position] / [background-size]
+*/
+
+header li a {
+    text-decoration: none;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 2rem;
+    color: #ea9b25;
+}
+
+header {
+    text-align: right;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 2rem;
+    color: #ea9b25;
+}
+
+header a::selection {
+    color: #7af9ff;
+    background-color: #ea9b25;
+}
+
+/* style header elements */
+
+#greeting h1 {
+    font-family: 'Roboto Black', sans-serif;
+    font-size: 5em;
+    color: #383838;
+    margin: auto;
+    text-align: center;
+}
+
+#greeting p {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 1.5em;
+    color: #383838;
+    text-align: center;
+}
+
+#greeting h1::selection, p::selection {
+    color: #7af9ff;
+    background-color: #ea9b25;
+}
+
+/* pseudo element styling for elements within #greeting */
+
+#form {
+    margin: auto;
+    border: 2px solid #383838;
+    border-radius: 0.5em;
+    padding: 20px;
+    background: linear-gradient(45deg, #dee5ed, #c9cacc);
+    max-width: 60rem;
+}
+
+/*
+    styling form element to center content within the page (margin: auto)
+    give border information, set border-radius
+    give padding
+    background set to linear-gradient
+    max-width set to root html element (10px)
+*/
+
+#form h1 {
+    font-family: 'Portal', sans-serif;
+    font-size: 3em;
+    color: #383838;
+}
+
+/* styles h1 element inside form (id "form") */
+
+#form label {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 1.5rem;
+    color: #383838;
+}
+
+#form input {
+    box-sizing: border-box;
+    display: block;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 1.5em;
+    color: #383838;
+    padding: 0.2em;
+    margin: 0.2em;
+    border: 1px solid #383838;
+    border-radius: 0.5em;
+    max-width: auto;
+    transition: ease-in 0.25s;
+}
+
+#form input:focus {
+    box-shadow: 0 1px 4px 4px #ea9b25;
+}
+
+#form input:hover {
+    box-shadow: 0 1px 4px 4px #ea9b25;
+}
+
+#form input:checked {
+    box-shadow: 0 1px 4px 4px #7af9ff;
+    transition: ease-in 0.50s;
+}
+
+#form input[type="text"]:valid {
+    box-shadow: 0 1px 4px 4px #7af9ff;
+    transition: ease-in 0.50s;
+}
+
+#form input[type="email"]:valid {
+    box-shadow: 0 1px 4px 4px #7af9ff;
+    transition: ease-in 0.50s;
+}
+
+#form input[type="number"]:valid {
+    box-shadow: 0 1px 4px 4px #7af9ff;
+    transition: ease-in 0.50s;
+}
+
+/* styles most inputs within #form along with different pseudo class states */
+
+textarea {
+    border-radius: 0.5em;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 1.5em;
+    color: #383838;
+    width: 100%;
+    resize: vertical;
+    margin-bottom: 0.5em;
+}
+
+textarea:focus {
+    box-shadow: 0 1px 4px 4px #7af9ff;
+}
+
+/* styles textarea for appearance and pseudoclass */
+
+button.fuckers {
+    background-color: #dee5ed;
+    color: #383838;
+    font-size: 1.5rem;
+    font-family: 'Noto Sans JP', sans-serif;
+    border: 2px solid #383838;
+    border-radius: 0.2em;
+}
+
+button.fuckers:hover {
+    box-shadow: 0 1px 4px 4px #ea9b25;
+    transition: ease-in 0.25s;
+}
+
+button.fuckers:active {
+    box-shadow: 0 1px 4px 4px #7af9ff;
+    transition: none;
+}
+
+/* styles button.fuckers for appearance and associated pseudo classes */
+
+fieldset {
+    margin: 0.2em;
+    width: max-content;
+    border-radius: 1em;
+}
+
+/*
+set fieldset to max-content so it wraps into legend element
+semantic markup fieldset wraps legend and other controls
+*/
+
+legend {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 1.2em;
+}
+
+/*
+    styles legend element
+    legend is semantic markup acting as a heading for controls grouped within fieldset
+*/
