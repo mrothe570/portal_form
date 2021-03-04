@@ -31,16 +31,20 @@
             <section id="form_header">
                 <h1>Aperture Science Enrichment Center Survey</h1>
             </section>
-            <section id="basic_infos" class="form-group row">
-                <label class="form-control-label" for="name">Enter your name</label>
-                <input class="form-control-input col-md-6" type="text" name="name" id="name" placeholder="first, last"
-                    required>
-                <label class="form-control-label" for="email">Enter an email</label>
-                <input class="form-control-input col-md-6" type="email" name="email" id="email"
-                    placeholder="example@example.com" required>
-                <label class="form-control-label" for="number">Enter your age</label>
-                <input class="form-control-input col-md-4" type="number" name="number" id="number" min="16" max="98"
-                    required>
+            <section id="basic_infos" class="form-group">
+                <div class="row">
+                    <label class="form-control-label" for="name">Enter your name</label>
+                    <input class="form-control-input col-md-6" type="text" name="name" id="name"
+                        placeholder="first, last" required>
+                    <label class="form-control-label" for="email">Enter an email</label>
+                    <input class="form-control-input col-md-6" type="email" name="email" id="email"
+                        placeholder="example@example.com" required>
+                </div>
+                <div class="row">
+                    <label class="form-control-label" for="number">Enter your age</label>
+                    <input class="form-control-input col-2 col-md-1" type="number" name="number" id="number" min="16"
+                        max="98" required>
+                </div>
             </section>
             <section id="heuristic_data">
                 <div class="form-group">
