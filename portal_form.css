@@ -12,9 +12,7 @@
 
 html {
     margin: 0;
-    background: linear-gradient(60deg, rgba(100, 125, 147, 0.75), rgba(100, 125, 147, 0.95));
-    /* url(https://www.dropbox.com/s/f9dhsoc3c9j9i6k/circuit_board.png?raw=1) no-repeat center/cover; */
-    font-size: 10px;
+    font-size: 62.5%;
 }
 
 /*
@@ -26,11 +24,9 @@ html {
     ** syntax for background shorthand does not matter except for background-size, which must be included immediately after background-position and separated by a forward slash: [background-position] / [background-size]
 */
 
-header li a {
-    text-decoration: none;
-    font-family: 'Noto Sans JP', sans-serif;
-    font-size: 2rem;
-    color: #ea9b25;
+body {
+    background: linear-gradient(60deg, rgba(100, 125, 147, 0.75), rgba(100, 125, 147, 0.95));
+    /* url(https://www.dropbox.com/s/f9dhsoc3c9j9i6k/circuit_board.png?raw=1) no-repeat center/cover; */
 }
 
 header {
@@ -40,26 +36,35 @@ header {
     color: #ea9b25;
 }
 
-header a::selection {
+header li {
+    list-style-type: none;
+}
+
+header li a {
+    text-decoration: none;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 2rem;
+    color: #ea9b25;
+}
+
+header li a:hover {
     color: #7af9ff;
-    background-color: #ea9b25;
 }
 
 /* style header elements */
 
 #greeting h1 {
     font-family: 'Roboto Black', sans-serif;
-    font-size: 5em;
+    font-size: 5rem;
     color: #383838;
-    margin: auto;
-    text-align: center;
 }
 
 #greeting p {
     font-family: 'Noto Sans JP', sans-serif;
-    font-size: 1.5em;
-    color: #383838;
-    text-align: center;
+    font-size: 1.8rem;
+    background-image: linear-gradient(45deg, #ea9b25, #7af9ff);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
 }
 
 #greeting h1::selection, p::selection {
@@ -70,12 +75,10 @@ header a::selection {
 /* pseudo element styling for elements within #greeting */
 
 #form {
-    margin: auto;
     border: 2px solid #383838;
     border-radius: 0.5em;
-    padding: 20px;
+    padding: 2em;
     background: linear-gradient(45deg, #dee5ed, #c9cacc);
-    max-width: 60rem;
 }
 
 /*
@@ -88,7 +91,7 @@ header a::selection {
 
 #form h1 {
     font-family: 'Portal', sans-serif;
-    font-size: 3em;
+    font-size: 3rem;
     color: #383838;
 }
 
@@ -101,16 +104,9 @@ header a::selection {
 }
 
 #form input {
-    box-sizing: border-box;
-    display: block;
     font-family: 'Noto Sans JP', sans-serif;
-    font-size: 1.5em;
+    font-size: 1.5rem;
     color: #383838;
-    padding: 0.2em;
-    margin: 0.2em;
-    border: 1px solid #383838;
-    border-radius: 0.5em;
-    max-width: auto;
     transition: ease-in 0.25s;
 }
 
@@ -149,7 +145,6 @@ textarea {
     font-family: 'Noto Sans JP', sans-serif;
     font-size: 1.5em;
     color: #383838;
-    width: 100%;
     resize: vertical;
     margin-bottom: 0.5em;
 }
@@ -160,7 +155,7 @@ textarea:focus {
 
 /* styles textarea for appearance and pseudoclass */
 
-button.fuckers {
+button.subres {
     background-color: #dee5ed;
     color: #383838;
     font-size: 1.5rem;
@@ -169,7 +164,7 @@ button.fuckers {
     border-radius: 0.2em;
 }
 
-button.fuckers:hover {
+button.subres:hover {
     box-shadow: 0 1px 4px 4px #ea9b25;
     transition: ease-in 0.25s;
 }
@@ -183,8 +178,6 @@ button.fuckers:active {
 
 fieldset {
     margin: 0.2em;
-    width: max-content;
-    border-radius: 1em;
 }
 
 /*
