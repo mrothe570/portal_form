@@ -13,29 +13,27 @@
 </head>
 
 <body>
+    <header class="container-fluid">
+        <nav class="d-flex justify-content-end">
+            <li><a href="#">Escape?</a>
+            </li>
+        </nav>
+    </header>
     <div class="container">
-        <header>
-            <nav>
-                <li><a href="#">Escape?</a>
-                </li>
-            </nav>
-        </header>
-        <div class="row">
-            <section id="greeting">
-                <h1>Aperture Science Enrichment Center</h1>
-                <p>Hello there. You thought this was over, didn't you? Ha ha. Ha ha. That was me laughing at you.
-                    We here at the
-                    Aperture Science Encrichment Center would greatly appreciate you taking the time to fill out this
-                    survey.
-                    After successful submission, there will be cake.</p>
-            </section>
-        </div>
+        <section class="container" id="greeting">
+            <h1 class="d-flex justify-content-center">Aperture Science Enrichment Center</h1>
+            <p>Hello there. You thought this was over, didn't you? Ha ha. Ha ha. That was me laughing at you.
+                We here at the
+                Aperture Science Encrichment Center would greatly appreciate you taking the time to fill out this
+                survey.
+                After successful submission, there will be cake.</p>
+        </section>
         <section id="form">
-            <form action="/portal" class="container">
-                <section id="form_header">
-                    <h1>Aperture Science Enrichment Center Exit Survey</h1>
+            <form class="container" action="/portal">
+                <section class="container" id="form_header">
+                    <h1 class="d-flex justify-content-center">Aperture Science Enrichment Center Exit Survey</h1>
                 </section>
-                <section id="basic_infos" class="row">
+                <section class="row" id="basic_infos">
                     <div class="form-group col-md-6">
                         <label class="form-control-label col-form-label" for="name">Enter your name</label>
                         <input class="form-control-input" type="text" name="name" id="name" placeholder="first, last"
@@ -46,68 +44,101 @@
                         <input class="form-control-input" type="email" name="email" id="email"
                             placeholder="example@example.com" required>
                     </div>
-                    <div class="row">
-                        <div class="form-group col-4 col-md-2">
-                            <label class="form-control-label col-form-label" for="number">Enter your age</label>
-                            <input class="form-control-input" type="number" name="number" id="number" min="16" max="98"
-                                required>
-                        </div>
+                    <div class="form-group col-4 col-md-2">
+                        <label class="col-form-label d-block" for="number">Enter your age</label>
+                        <input class="form-control-input" type="number" name="number" id="number" min="16" max="98"
+                            required>
                     </div>
                 </section>
-                <section id="heuristic_data" class="row">
-                    <div class="form-group col-8 col-md-4">
-                        <label class="col-form-label" for="select">Would you recommened your stay at the Aperture
+                <section class="row" id="heuristic data">
+                    <div class="form-group col-md-10">
+                        <label class="col-form-label" for="select">Would you recommend your stay at the Aperture
                             Science computer-aided Enrichment Center?</label>
-                        <select class="form-control" name="select" id="select" required>
-                            <option value="">-- Please select an option --</option>
-                            <option value="yes">Yes</option>
-                            <option value="absolutely">Absolutely</option>
-                            <option value="of_course">Of course!</option>
+                        <div class="col-8 col-md-4 mb-2">
+                            <select class="form-control" name="select" id="select" required>
+                                <option value="">-- Please select an option --</option>
+                                <option value="yes">Yes</option>
+                                <option value="absolutely">Absolutely</option>
+                                <option value="of_course">Of course!</option>
+                            </select>
+                        </div>
                     </div>
-                    <fieldset class="form-check-group">
+                    <fieldset>
                         <legend>Would you like to donate one or all vital organs to the Aperture Science
                             Self-esteem Fund for Girls?</legend>
-                        <label class="form-check-label" for="organ_yes">Yes</label>
-                        <input class="form-check-input" type="radio" name="organ" value="organ" id="organ_yes">
-                        <label class="form-check-label" for="organ-some">Some</label>
-                        <input class="form-check-input" type="radio" name="organ" value="organ" id="organ_some">
-                        <label class="form-control-label" for="organs">Please specify amount </label>
-                        <input class="form-control-input" type="number" name="organs" id="organs" min="1" max="5"
-                            required>
+                        <div class="form-check-group col-2">
+                            <label class="form-check-label" for="organ_yes">Yes</label>
+                            <input class="form-check-input" type="radio" name="organ" value="organ" id="organ_yes">
+                        </div>
+                        <div class="form-check-group col-2">
+                            <label class="form-check-label mb-1" for="organ_some">Some</label>
+                            <input class="form-check-input mb-1" type="radio" name="organ" value="organ"
+                                id="organ_some">
+                        </div>
+                        <div class="form-group col-2 d-inline">
+                            <label class="form-control-label mb-1" for="organs">Please specify amount </label>
+                            <input class="form-control-input mb-1" type="number" name="organs" id="organs" min="1"
+                                max="5" required>
+                        </div>
                     </fieldset>
-                    <fieldset class="form-check-group">
+                    <fieldset>
                         <legend>Did you experience any prolonged exposure to the button?</legend>
-                        <label class="form-check-label" for="button_yes">Yes</label>
-                        <input class="form-check-input" type="radio" name="button" value="button" id="button_yes">
-                        <label class="form-check-label" for="button_no">No</label>
-                        <input class="form-check-input" type="radio" name="button" value="button" id="button_no">
+                        <div class="form-check-group col-2">
+                            <label class="form-check-label mb-1" for="button_yes">Yes</label>
+                            <input class="form-check-input mb-1" type="radio" name="button" value="button"
+                                id="button_yes">
+                        </div>
+                        <div class="form-check-group col-2">
+                            <label class="form-check-label mb-1" for="button_no">No</label>
+                            <input class="form-check-input mb-1" type="radio" name="button" value="button"
+                                id="button_no">
+                        </div>
                     </fieldset>
-                    <fieldset class="form-check-group">
-                        <legend>Did you experience any of the symptoms most commonly associated with Enrichment Center
+                    <fieldset>
+                        <legend>Did you experience any of the symptoms most commonly associated with Enrichment
+                            Center
                             testing?</legend>
-                        <label class="form-check-label" for="sup">Superstition</label>
-                        <input class="form-check-input" type="checkbox" name="sup" value="symptoms" id="sup">
-                        <label class="form-check-label" for="per">Perceiving inanimate objects as alive</label>
-                        <input class="form-check-input" type="checkbox" name="per" value="symptoms" id="per">
-                        <label class="form-check-label" for="hal">Hallucinations</label>
-                        <input class="form-check-input" type="checkbox" name="hal" value="symptoms" id="hal">
+                        <div class="form-check-group">
+                            <label class="form-check-label mb-1" for="sup">Superstition</label>
+                            <input class="form-check-input mb-1" type="checkbox" name="sup" value="symptoms" id="sup">
+                        </div>
+                        <div class="form-check-group">
+                            <label class="form-check-label mb-1" for="per">Perceiving inanimate objects as alive</label>
+                            <input class="form-check-input mb-1" type="checkbox" name="per" value="symptoms" id="per">
+                        </div>
+                        <div class="form-check-group">
+                            <label class="form-check-label mb-1" for="hal">Hallucinations</label>
+                            <input class="form-check-input mb-1" type="checkbox" name="hal" value="symptoms" id="hal">
+                        </div>
                     </fieldset>
                 </section>
                 <section class="row" id="int_check">
                     <fieldset class="form-check-group">
                         <legend>What are the primary goals of all Enrichment Center activities?
                         </legend>
-                        <label class="form-check-label" for="candescence">Victory Candescence</label>
-                        <input class="form-check-input" type="checkbox" name="candescence" value="goals"
-                            id="candescence">
-                        <label class="form-check-label" for="safety">Safety</label>
-                        <input class="form-check-input" type="checkbox" name="safety" value="goals" id="safety">
-                        <label class="form-check-label" for="learning">Learning</label>
-                        <input class="form-check-input" type="checkbox" name="learning" value="goals" id="learning">
-                        <label class="form-check-label" for="exit">Finding the exit</label>
-                        <input class="form-check-input" type="checkbox" name="exit" value="goals" id="exit">
-                        <label class="form-check-label" for="fun">Having a good time</label>
-                        <input class="form-check-input" type="checkbox" name="fun" value="goals" id="fun">
+                        <div class="form-check-group">
+                            <label class="form-check-label mb-1" for="candescence">Victory Candescence</label>
+                            <input class="form-check-input mb-1" type="checkbox" name="candescence" value="goals"
+                                id="candescence">
+                        </div>
+                        <div class="form-check-group">
+                            <label class="form-check-label mb-1" for="safety">Safety</label>
+                            <input class="form-check-input mb-1" type="checkbox" name="safety" value="goals"
+                                id="safety">
+                        </div>
+                        <div class="form-check-group">
+                            <label class="form-check-label mb-1" for="learning">Learning</label>
+                            <input class="form-check-input mb-1" type="checkbox" name="learning" value="goals"
+                                id="learning">
+                        </div>
+                        <div class="form-check-group">
+                            <label class="form-check-label mb-1" for="exit">Finding the exit</label>
+                            <input class="form-check-input mb-1" type="checkbox" name="exit" value="goals" id="exit">
+                        </div>
+                        <div class="form-check-group">
+                            <label class="form-check-label mb-1" for="fun">Having a good time</label>
+                            <input class="form-check-input mb-1" type="checkbox" name="fun" value="goals" id="fun">
+                        </div>
                     </fieldset>
                     <label for="comm">Please enter any additional commentary, with minimal enhancement of the truth,
                         here:</label>
